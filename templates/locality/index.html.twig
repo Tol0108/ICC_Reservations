@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block locality %}Liste des localitys{% endblock %}
+
+{% block body %}
+    <h1>Liste des {{ resource }}</h1>
+
+    <ul>
+    {% for locality in localitys %}
+        <li><a href="{{ path('locality_show', { id: locality.id }) }}">{{ locality.locality }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
