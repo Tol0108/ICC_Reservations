@@ -6,7 +6,7 @@
     <h1>Liste des {{ resource }}</h1>
 
     <ul>
-    {% for locality in localitys %}
+    {% for locality in locality %}
         <li><a href="{{ path('locality_show', { id: locality.id }) }}">{{ locality.locality }}</a></li>
     {% endfor %}
     </ul>
